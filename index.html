@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SEO  -->
+</head>
+
+<body>
+    <nav class="header">
+        <h1 class="header__logo">
+            <a href="index.html">Task<span>IT</span></a>
+        </h1>
+        <div>
+            <button id="addTaskBtn" class="addBtn">Add Task</button>
+        </div>
+    </nav>
+    <main class="main " id="appMain">
+        <div class="board" id="todo">
+            <!-- Todo tasks/cards -->
+            <div class="board__header">
+                <h2 class="board__title">To Do</h2>
+                <p class="board__count" id="todoNumber">2</p>
+            </div>
+
+            <div class="board__tasks" id="todoTaskContainer">
+              
+
+            </div>
+
+        </div>
+        </div>
+        <div class="board" id="doing">
+            <!-- Doing tasks/cards -->
+            <div class="board__header">
+                <h2 class="board__title">Doing</h2>
+                <p class="board__count" id="doingNumber">1</p>
+            </div>
+
+            <div class="board__tasks" id="doingTaskContainer">
+                <div class="board__task">
+                    <div class="board__task-header">
+                        <h3 class="board__task-title">Task 1</h3>
+                        <div class="board__task-actions">
+                            <button class="board__task-btn" id="editTaskBtn">Edit</button>
+                            <button class="board__task-btn" id="deleteTaskBtn">Delete</button>
+                        </div>
+                    </div>
+                    <p class="board__task-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                        voluptatum
+                        voluptatibus, quibusdam, quia, quos voluptas quod dolorum quae voluptatem quas
+                        voluptates
+                        consequatur
+                        voluptate. Quisquam voluptatum voluptatibus, quibusdam, quia, quos voluptas quod
+                        dolorum
+                        quae
+                        voluptatem quas voluptates consequatur voluptate.</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="board" id="completed">
+            <!-- Completed tasks/cards -->
+            <div class="board__header">
+                <h2 class="board__title">Completed</h2>
+                <p class="board__count" id="completedNumber">0</p>
+            </div>
+            <div class="board__tasks" id="completedTaskContainer">
+
+            </div>
+        </div>
+    </main>
+    <div class="empty-state" id="appEmptyState">
+        <p class="empty-state__title">No tasks yet. Add one by clicking the button above.</p>
+        <img src="./img/empty.svg" alt="empty" class="empty-state__img">
+    </div>
+    <!-- Modals -->
+    <div id="addTaskModal" class="modal-backdrop">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Add Task</h2>
+                <span class="modal-close" id="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form action="" class="modal-form" id="addTaskForm">
+                    <div class="modal-form__group">
+                        <label for="title" class="form__label">Title</label>
+                        <input type="text" class="form__input" id="title" placeholder="Enter title">
+                    </div>
+                    <div class="modal-form__group">
+                        <label for="description" class="form__label">Description</label>
+                        <textarea name="description" id="description" cols="30" rows="10"
+                            class="form__input"></textarea>
+                    </div>
+                    <div class="modal-form__group">
+                        <label for="status" class="form__label">Status</label>
+                        <select name="status" id="status" class="form__input">
+                            <option value="todo">To Do</option>
+                            <option value="doing">Doing</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <div class="modal-form__group">
+                        <button class="form__btn" id="addTaskFormBtn">Add Task</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- alerts error and success -->
+    <div id="errorAlert" class="error-alert">
+        <div class="alert alert--error">
+            <p class="alert__msg">Error</p>
+        </div>
+    </div>
+
+    <div id="successAlert" class="success-alert">
+        <div class="alert alert--success">
+            <p class="alert__msg">Success</p>
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+        <p>TaskIT &copy; <span id="currentYear">2023</span></p>
+    </footer>
+
+    <!-- <script src="refact.js"></script> -->
+    <!-- <script src="anRefact.js"></script> -->
+    <script src="app.js"></script>
+</body>
+
+</html>
